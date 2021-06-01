@@ -1,0 +1,4 @@
+harness void times5Sketch(int x){
+  int t = x * ??;
+  assert t == x + x + x + x +x;
+}

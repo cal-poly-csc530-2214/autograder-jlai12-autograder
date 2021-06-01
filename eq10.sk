@@ -1,0 +1,8 @@
+int sum10Sketch() implements sum10 {
+  return 1 + 2 + 3 + ??;
+}
+
+
+int sum10() {
+  return 1 + 2 + 3 + 4;
+}

@@ -1,0 +1,57 @@
+SKETCH version 1.7.6
+Benchmark = harness.sk
+/* BEGIN PACKAGE ANONYMOUS*/
+/*harness.sk:6*/
+
+void expr1 (int x, int y, ref int _out)/*harness.sk:6*/
+{
+  _out = y * 3;
+  return;
+}
+/*harness.sk:9*/
+
+void expr2 (int x, int y, ref int _out, ref global int count__ANONYMOUS_s4)  implements twox/*harness.sk:9*/
+{
+  count__ANONYMOUS_s4 = count__ANONYMOUS_s4 + 1;
+  _out = x * 2;
+  return;
+}
+/*harness.sk:13*/
+
+void foo (ref global int count__ANONYMOUS_s7)/*harness.sk:13*/
+{
+  int _out_s1 = 0;
+  expr1(5, 2, _out_s1);
+  int _out_s3 = 0;
+  expr2(2, 4, _out_s3, count__ANONYMOUS_s7);
+  assert ((_out_s1 * _out_s3) == 24); //Assert at harness.sk:14 (0)
+}
+/*harness.sk:13*/
+
+void foo__Wrapper ()  implements foo__WrapperNospec/*harness.sk:13*/
+{
+  global int count__ANONYMOUS_s6 = 0;
+  glblInit_count__ANONYMOUS_s9(count__ANONYMOUS_s6);
+  foo(count__ANONYMOUS_s6);
+}
+/*harness.sk:13*/
+
+void foo__WrapperNospec ()/*harness.sk:13*/
+{ }
+/*harness.sk:1*/
+
+void glblInit_count__ANONYMOUS_s9 (ref int count__ANONYMOUS_s8)/*harness.sk:1*/
+{
+  count__ANONYMOUS_s8 = 0;
+}
+/*harness.sk:2*/
+
+void twox (int x, int y, ref int _out, ref global int count__ANONYMOUS_s5)/*harness.sk:2*/
+{
+  count__ANONYMOUS_s5 = count__ANONYMOUS_s5 + 1;
+  _out = x + x;
+  return;
+}
+/* END PACKAGE ANONYMOUS*/
+[SKETCH] DONE
+Total time = 459

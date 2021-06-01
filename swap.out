@@ -1,0 +1,22 @@
+SKETCH version 1.7.6
+Benchmark = swap.sk
+/* BEGIN PACKAGE ANONYMOUS*/
+/*swap.sk:8*/
+
+void swap (ref bit x, ref bit y)/*swap.sk:8*/
+{
+  y = x ^ y;
+  x = x ^ y;
+  x = x ^ y;
+}
+/*swap.sk:1*/
+
+void swapSketch (ref bit x, ref bit y)  implements swap/*swap.sk:1*/
+{
+  y = x ^ y;
+  x = x ^ y;
+  x = x ^ y;
+}
+/* END PACKAGE ANONYMOUS*/
+[SKETCH] DONE
+Total time = 556

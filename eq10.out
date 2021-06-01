@@ -1,0 +1,20 @@
+SKETCH version 1.7.6
+Benchmark = eq10.sk
+/* BEGIN PACKAGE ANONYMOUS*/
+/*eq10.sk:6*/
+
+void sum10 (ref int _out)/*eq10.sk:6*/
+{
+  _out = 10;
+  return;
+}
+/*eq10.sk:1*/
+
+void sum10Sketch (ref int _out)  implements sum10/*eq10.sk:1*/
+{
+  _out = 10;
+  return;
+}
+/* END PACKAGE ANONYMOUS*/
+[SKETCH] DONE
+Total time = 502

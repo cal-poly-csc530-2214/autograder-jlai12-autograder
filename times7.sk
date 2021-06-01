@@ -1,0 +1,11 @@
+int barSketch(int x) implements bar {
+  int t = x * ??;
+  int v = x * ??;
+  return t + v;
+}
+
+int bar(int x) {
+  int t = x * 4;
+  int v = x * 3;
+  return t + v;
+}

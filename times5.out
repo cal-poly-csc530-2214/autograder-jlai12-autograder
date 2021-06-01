@@ -1,0 +1,22 @@
+SKETCH version 1.7.6
+Benchmark = times5.sk
+/* BEGIN PACKAGE ANONYMOUS*/
+/*times5.sk:1*/
+
+void times5Sketch (int x)/*times5.sk:1*/
+{
+  assert ((x * 5) == ((((x + x) + x) + x) + x)); //Assert at times5.sk:3 (2)
+}
+/*times5.sk:1*/
+
+void times5Sketch__Wrapper (int x)  implements times5Sketch__WrapperNospec/*times5.sk:1*/
+{
+  times5Sketch(x);
+}
+/*times5.sk:1*/
+
+void times5Sketch__WrapperNospec (int x)/*times5.sk:1*/
+{ }
+/* END PACKAGE ANONYMOUS*/
+[SKETCH] DONE
+Total time = 518

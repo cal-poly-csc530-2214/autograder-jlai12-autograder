@@ -1,0 +1,22 @@
+SKETCH version 1.7.6
+Benchmark = double.sk
+/* BEGIN PACKAGE ANONYMOUS*/
+/*double.sk:1*/
+
+void doubleSketch (int x)/*double.sk:1*/
+{
+  assert ((x * 2) == (x + x)); //Assert at double.sk:3 (2)
+}
+/*double.sk:1*/
+
+void doubleSketch__Wrapper (int x)  implements doubleSketch__WrapperNospec/*double.sk:1*/
+{
+  doubleSketch(x);
+}
+/*double.sk:1*/
+
+void doubleSketch__WrapperNospec (int x)/*double.sk:1*/
+{ }
+/* END PACKAGE ANONYMOUS*/
+[SKETCH] DONE
+Total time = 1047

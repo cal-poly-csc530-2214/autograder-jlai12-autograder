@@ -1,0 +1,12 @@
+void swapSketch(ref bit x, ref bit y) implements swap {
+  if (??) { x = x^y; } else { y = x^y; }
+  if (??) { x = x^y; } else { y = x^y; }
+  if (??) { x = x^y; } else { y = x^y; }
+}
+
+
+void swap(ref bit x, ref bit y) {
+  y = x^y;
+  x = x^y;
+  x = x^y;
+}

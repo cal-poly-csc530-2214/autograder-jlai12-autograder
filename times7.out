@@ -1,0 +1,20 @@
+SKETCH version 1.7.6
+Benchmark = times7.sk
+/* BEGIN PACKAGE ANONYMOUS*/
+/*times7.sk:7*/
+
+void bar (int x, ref int _out)/*times7.sk:7*/
+{
+  _out = (x * 4) + (x * 3);
+  return;
+}
+/*times7.sk:1*/
+
+void barSketch (int x, ref int _out)  implements bar/*times7.sk:1*/
+{
+  _out = (x * 7) + 0;
+  return;
+}
+/* END PACKAGE ANONYMOUS*/
+[SKETCH] DONE
+Total time = 553
